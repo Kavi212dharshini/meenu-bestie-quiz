@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ennaval Meenu 🫂💋 💗</title><style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffe1ec, #e8dfff);
+        color: #58334d;
+        text-align: center;
+    }
+
+    header {
+        padding: 45px 15px;
+        background: #ffb6d0;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 22px;
+        margin: 15px auto;
+        max-width: 500px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px #d9a6c0;
+    }
+
+    button {
+        background: #ff69a6;
+        color: white;
+        border: none;
+        padding: 13px 22px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    button:hover {
+        background: #e84c8b;
+        transform: scale(1.05);
+    }
+
+    #surprise {
+        display: none;
+        font-size: 20px;
+        color: #e63979;
+        line-height: 1.7;
+    }
+
+    footer {
+        background: #ffb6d0;
+        padding: 20px;
+    }
+
+    .heart {
+        font-size: 30px;
+        animation: beat 1s infinite alternate;
+    }
+
+    @keyframes beat {
+        from { transform: scale(1); }
+        to { transform: scale(1.2); }
+    }
+</style>
+
+</head><body><header>
+    <div class="heart">💗 💖 💗</div>
+    <h1>Hey Meenu! 🥹💕</h1>
+    <h2>Welcome to Your Little Friendship World!</h2>
+    <p>A special website made just for you! 🎀</p>
+    <button onclick="showSurprise()">Click for a Surprise 🎁</button>
+
+    <p id="surprise">
+        Surprise, Meenu! 💖🥹<br>
+        You are not just my bestie; you're a special part of my life!<br>
+        No matter how much we fight, our friendship is precious.<br>
+        stay with me  today, tomorrow, and forever! 🫂💗
+        Sorry Maah 💖🥹
+    </p>
+</header>
+
+<section>
+    <h2>💕 Why You're Special</h2>
+
+    <div class="card">
+        <h3>♾️💗My SunShineeyyyy🫂</h3>
+        <p>Life is more fun when you're around!</p>
+    </div>
+
+    <div class="card">
+        <h3>🫂 My Comfort Person</h3>
+        <p>Thank you for making ordinary moments special.</p>
+    </div>
+
+    <div class="card">
+        <h3>♾️ Forever Bestie</h3>
+        <p>Different moods, silly fights, endless memories!</p>
+    </div>
+</section>
+
+<section>
+    <section id="quiz">
+    <h2>🔥 How Well Do You Know Your Bestie?</h2>
+    <p>Let's expose Meenu 😂💗</p><div class="card" id="quizCard">
+    <h3 id="questionNumber">Question 1 of 15</h3>
+    <h2 id="question">Ready for the challenge? 😈</h2>
+    <div id="options"></div>
+    <p id="reaction"></p>
+    <button id="nextButton" onclick="nextQuestion()" style="display:none;">
+        Next Question ➡️
+    </button>
+</div>
+
+<div class="card" id="resultCard" style="display:none;">
+    <h2>🎉 Your Bestie Report!</h2>
+    <h1 id="score"></h1>
+    <h2 id="resultTitle"></h2>
+    <p id="resultMessage"></p>
+    <button onclick="restartQuiz()">Play Again 🔄</button>
+</div>
+
+</section>
+</section>
+
+<section>
+    <h2>💌 A Little Message for You</h2>
+    <div class="card">
+        <p>
+            Dear Meenu,<br><br>
+            Thank you for being part of my life.
+            I hope we keep laughing at silly things,
+            making unforgettable memories, and supporting
+            each other through every situation.
+            <br><br>
+            No matter where life takes us,
+            you'll always have a special place in my heart. 💗
+            <br><br>
+            With lots of love,<br>
+            Your Bestie 🫶
+        </p>
+    </div>
+</section>
+
+<footer>
+    <h3>Made with 💗 just for Meenu</h3>
+    <p>Best Friends Forever ♾️</p>
+</footer>
+
+<script>
+   const questions = [
+{
+q: "Who is the beauty queen? 🎭",
+options: ["Meenu 😂", "Her bestie 😎", "Both of us 🤡", "Both are ugly🤣"], answer:0,
+funny:" Ennaval Eppavum Azhagiiii tha ga ♾️💗🫂 "
+},
+{
+q: "Meenu says 'I'm not angry.' What does it mean? 😏",
+options: ["She's happy 😊", "Danger incoming 🚨", "She's sleepy 😴", "Nothing happened 🤷"], answe:1,
+funny: "Everyone, please stay calm! 😂"
+},
+{
+q: "Who will laugh at the worst possible moment? 🤣",
+options: ["Meenu", "Bestie", "Both together", "Random stranger"], answer:2,
+funny: "Serious situation = comedy show! 💀"
+},
+{
+q: "If Meenu becomes a millionaire, what happens first? 💸",
+options: ["Buys a mansion 🏰", "Treats her bestie 🍕", "Buys everything 🛍️", "Says she's still broke 😂"], answer:2,
+funny: "Bestie is waiting for that treat! 👀"
+},
+{
+q: "Who replies late but expects an instant reply? 📱",
+options: ["Meenu 😌", "Bestie 😭", "Both of us 💀", "Neither of us"], answer:0,
+funny: "Double standards detected! 🚨😂"
+},
+{
+q: "What is Meenu's biggest talent? 🌟",
+options: ["Sleeping anywhere 😴", "Talking nonstop 🗣️", "Overthinking everything 🧠", "Makeup Queen 👑"], answer:3,
+funny: "Talent show judges are confused! 😂"
+},
+{
+q: "Who is more likely to start a fight over nothing? 🥊",
+options: ["Meenu", "Bestie", "Both equally", "Nobody, we're angels 😇"], answer:1,
+funny: "Friendship court is now in session! ⚖️"
+},
+{
+q: "Meenu says 'I'll be ready in 5 minutes.' How long? ⏰",
+options: ["Exactly 5 minutes", "15 minutes", "One full hour", "Tomorrow morning 💀"], answer:2,
+funny: "Time is just a suggestion! 😂"
+},
+{
+q: "Who knows all the secrets? 🤫",
+options: ["Meenu", "Bestie", "Both know everything", "Nobody remembers anything 😂"], answer:2,
+funny: "The secret service wants to recruit you! 🕵️"
+},
+{
+q: "If you both get lost together, what happens? 🗺️",
+options: ["Find the way immediately", "Blame each other 😂", "Ask Google Maps", "Get even more lost 💀"], answer:1,
+funny: "Survival skills: still loading... 😂"
+},
+{
+q: "Who is more likely to fall in love first? 💘",
+options: ["Meenu 👀", "Bestie 👀", "Both at the same time 😂", "Neither, too busy gossiping"], answer:3,
+funny: "Love story loading... 🍿"
+},
+{
+q: "What happens when someone insults Meenu's bestie? 😤",
+options: ["Meenu becomes a lawyer ⚖️", "She starts a debate 🎤", "She gives a death stare 👀", "The whole gang assembles 🫡"], answer:2,
+funny: "Friendship protection squad activated! 🛡️"
+},
+{
+q: "Who takes more photos? 📸",
+options: ["Meenu", "Bestie", "Both of us", "We don't take photos"], answer:0,
+funny: "Photographer, editor, director — all in one! 😂"
+},
+{
+q: "Choose your friendship status. 💗",
+options: ["Sweet besties 🥹", "Partners in crime 😈", "Professional troublemakers 🤡", "Unbreakable duo ♾️"], answer:3,
+funny: "This friendship deserves its own movie! 🎬"
+},
+{
+q: "Final question: Will you leave your bestie for a million rupees? 💰",
+options: ["Never ever! 🫂", "Give me a minute to think 😂", "Depends on the amount 💀", "We split the money! 😎"], answer:0,
+funny: "Friendship loyalty test completed! 💖"
+}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+function showQuestion() {
+answered = false;
+
+document.getElementById("questionNumber").innerText =
+    `Question ${currentQuestion + 1} of ${questions.length}`;
+
+document.getElementById("question").innerText =
+    questions[currentQuestion].q;
+
+document.getElementById("reaction").innerText = "";
+
+document.getElementById("nextButton").style.display = "none";
+
+const optionsDiv = document.getElementById("options");
+optionsDiv.innerHTML = "";
+
+questions[currentQuestion].options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.innerText = option;
+    button.style.display = "block";
+    button.style.width = "100%";
+    button.style.maxWidth = "400px";
+    button.style.margin = "10px auto";
+
+    button.onclick = () => selectAnswer(index, button);
+
+    optionsDiv.appendChild(button);
+});
+
+}
+
+
+    function selectAnswer(index, selectedButton) {
+    if (answered) return;
+
+    answered = true;
+
+    const correctIndex = questions[currentQuestion].answer;
+
+    if (index === correctIndex) {
+        score++;
+        selectedButton.style.backgroundColor = "#90EE90";
+    } else {
+        selectedButton.style.backgroundColor = "#FF9999";
+    }
+
+    document.getElementById("reaction").innerText =
+        questions[currentQuestion].funny;
+
+    document.querySelectorAll("#options button").forEach(button => {
+        button.disabled = true;
+        button.style.opacity = "0.7";
+    });
+
+    selectedButton.style.opacity = "1";
+
+    document.getElementById("nextButton").style.display = "inline-block";
+
+    if (currentQuestion === questions.length - 1) {
+        document.getElementById("nextButton").innerText = "See My Result 🎉";
+    } else {
+        document.getElementById("nextButton").innerText = "Next Question ➡️";
+    }
+}
+
+
+
+function nextQuestion() {
+if (!answered) return;
+
+currentQuestion++;
+
+if (currentQuestion < questions.length) {
+    showQuestion();
+} else {
+    showResult();
+}
+
+}
+
+function showResult() {
+document.getElementById("quizCard").style.display = "none";
+document.getElementById("resultCard").style.display = "block";
+
+document.getElementById("score").innerText =
+    `${score}/${questions.length}`;
+
+document.getElementById("resultTitle").innerText =
+    "Bestie Energy: 100% 💗";
+
+document.getElementById("resultMessage").innerText =
+    "Congratulations! You survived Meenu's savage challenge! 😂🫂";
+    if (typeof window.saveQuizResult === "function") {
+    window.saveQuizResult(score);
+}
+
+}
+
+function restartQuiz() {
+currentQuestion = 0;
+score = 0;
+
+document.getElementById("quizCard").style.display = "block";
+document.getElementById("resultCard").style.display = "none";
+
+document.getElementById("nextButton").innerText = "Next Question ➡️";
+
+showQuestion();
+
+}
+
+showQuestion();
+function showSurprise() {
+    const surprise = document.getElementById("surprise");
+
+    if (surprise) {
+        surprise.style.display =
+            surprise.style.display === "none" ||
+            surprise.style.display === ""
+                ? "block"
+                : "none";
+    }
+}
+</script>
+<script type="module">
+  import { initializeApp } from
+    "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc
+  } from
+    "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2jUOQO6QvxKqA84iv57QzwqzRmH-lGXc",
+    authDomain: "meenubestiequiz.firebaseapp.com",
+    projectId: "meenubestiequiz",
+    storageBucket: "meenubestiequiz.firebasestorage.app",
+    messagingSenderId: "902826441688",
+    appId: "1:902826441688:web:c4d5b9727e3010a05590ad",
+    measurementId: "G-9DHTZFX8XE"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Make the database available to the quiz code
+  window.saveQuizResult = async function(score) {
+    try {
+      await addDoc(collection(db, "quizResults"), {
+        name: "Meenu",
+        score: score,
+        totalQuestions: 15,
+        createdAt: new Date()
+      });
+
+      console.log("Quiz result saved successfully!");
+    } catch (error) {
+      console.error("Could not save quiz result:", error);
+    }
+  };
+
+  console.log("Firebase connected successfully!");
+</script>
+
+
+
+  
+</script>
+</body>
+</html>
